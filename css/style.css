@@ -1,0 +1,143 @@
+:root{
+    --darkCyan: hsl(185, 75%, 39%);
+    --veryBlue: hsl(229, 23%, 23%);
+    --darkGrayishblue: hsl(227, 10%, 46%);
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--darkCyan);
+    height: 100vh;
+    display: flex;
+}
+
+h1{
+    font-size: 1rem;
+    color: var(--veryBlue);
+    padding-bottom: 15px;
+}
+
+h1 span{
+    color: var(--darkGrayishblue);
+    font-weight: 400;
+}
+
+h2{
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 400;
+    color: var(--darkGrayishblue);
+}
+
+p{
+    font-size: 0.65rem;
+    color: var(--darkGrayishblue);
+}
+
+.profile{
+    width: 25vmax;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 20px 30px 20px hsla(229, 23%, 23%, 0.156);
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__background{
+    width: 100%;
+    height: 120px;
+    background-color: hsl(185, 65%, 51%);
+    position: absolute;
+}
+
+.profile__main{
+    z-index: 9;
+    padding-top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__img{
+    width: 100%;
+    border-radius: 50%;
+    background-color: white;
+}
+
+img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+hr{
+    width: 100%;
+    border-bottom: none;
+    border-left: none;
+}
+
+.profile__name{
+    padding: 30px 0;
+}
+
+.profile__details{
+    display: flex;
+    padding: 30px 40px;
+}
+
+.profile__details div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.profile__details div:last-child{
+    margin-right: 0;
+}
+
+
+@media only screen and (max-width: 1024px){
+    .profile{
+        width: 30vmax;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .profile{
+        width: 45vmax;
+    }
+}
+
+
+@media only screen and (max-width: 480px){
+    .profile{
+        width: 60vmax;
+    }
+}
+
+
+@media only screen and (max-width: 375px){
+    .profile{
+        width: 50vmax;
+    }
+}
